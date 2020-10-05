@@ -618,6 +618,17 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "rise"
+version = "5.6.1"
+description = "Reveal.js - Jupyter/IPython Slideshow Extension"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, <4"
+
+[package.dependencies]
+notebook = ">=5.5.0"
+
+[[package]]
 name = "send2trash"
 version = "1.5.0"
 description = "Send file to trash natively under Mac OS X, Windows and Linux."
@@ -721,7 +732,7 @@ testing = ["pytest (>=3.5,<3.7.3 || >3.7.3)", "pytest-checkdocs (>=1.2.3)", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "8c1144ffb3d6b4e00e0778399c952d13fa43bdb43eec8c3ef90667ba52b462b0"
+content-hash = "3b237629e91f80d8a752e785669d34b20e5127545c97b496ad4fea4c6167a66f"
 
 [metadata.files]
 appnope = [
@@ -1041,6 +1052,10 @@ qtconsole = [
 qtpy = [
     {file = "QtPy-1.9.0-py2.py3-none-any.whl", hash = "sha256:fa0b8363b363e89b2a6f49eddc162a04c0699ae95e109a6be3bb145a913190ea"},
     {file = "QtPy-1.9.0.tar.gz", hash = "sha256:2db72c44b55d0fe1407be8fba35c838ad0d6d3bb81f23007886dc1fc0f459c8d"},
+]
+rise = [
+    {file = "rise-5.6.1-py2.py3-none-any.whl", hash = "sha256:e9637ee5499ad7801474da53a2c830350a44b2192c2f113594e4426190e55ad4"},
+    {file = "rise-5.6.1.tar.gz", hash = "sha256:1343f068d01adc4dd0226d9b278ce93fc92f365d827431a57e8d5679eb39f4d6"},
 ]
 send2trash = [
     {file = "Send2Trash-1.5.0-py3-none-any.whl", hash = "sha256:f1691922577b6fa12821234aeb57599d887c4900b9ca537948d2dac34aea888b"},
