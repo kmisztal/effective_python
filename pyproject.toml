@@ -10,6 +10,8 @@ jupyter = "^1.0.0"
 notebook = "7.6.3"
 jupyterlab = "4.6.4"
 jupyterlab-rise = "0.43.1"
+numpy = "1.26.2"
+matplotlib = "3.10.9"
 
 [tool.poetry.dev-dependencies]
 
