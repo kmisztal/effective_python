@@ -1,0 +1,6 @@
+{% extends "notes/base.html" %}
+{% block content %}
+<h1>Usunąć „{{ object.title }}”?</h1>
+<form method="post">{% csrf_token %}<button type="submit">Potwierdź usunięcie</button></form>
+<a href="{% url 'notes:note-detail' object.pk %}">Anuluj</a>
+{% endblock %}

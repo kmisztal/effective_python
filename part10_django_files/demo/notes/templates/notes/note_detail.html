@@ -1,0 +1,8 @@
+{% extends "notes/base.html" %}
+{% block title %}{{ note.title }} — Notatki{% endblock %}
+{% block content %}
+<h1>{{ note.title }}</h1>
+<time>{{ note.created_at|date:"d.m.Y H:i" }}</time>
+<article>{{ note.body }}</article>
+<p><a href="{% url 'notes:note-list' %}">Wróć do listy</a></p>
+{% endblock %}

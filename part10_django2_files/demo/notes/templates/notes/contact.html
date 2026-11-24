@@ -1,0 +1,5 @@
+{% extends "notes/base.html" %}
+{% block content %}<h1>Kontakt — demonstracja formularza</h1>
+<p>Dane służą wyłącznie walidacji; nie wysyłamy e-maila ani nie zapisujemy zgłoszenia.</p>
+<form method="post">{% csrf_token %}{{ form.as_p }}<button>Sprawdź formularz</button></form>
+{% endblock %}

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}Prywatne notatki{% endblock %}</title>
+<style>
+body {font:18px/1.6 system-ui,sans-serif;max-width:850px;margin:2rem auto;padding:0 1rem;color:#18372e;background:#f7faf8;}
+a {color:#08664b;} nav {border-bottom:1px solid #becfc5;padding-bottom:1rem;} article {white-space:pre-wrap;}
+input,textarea,button {font:inherit;max-width:100%;} textarea {display:block;width:100%;box-sizing:border-box;}
+.errorlist {color:#9b1c1c;} .inline {display:inline;} button {cursor:pointer;}
+</style>
+</head>
+<body>
+<nav><a href="{% url 'notes:note-list' %}">Moje notatki</a> · <a href="{% url 'notes:about' %}">O aplikacji</a>
+{% if user.is_authenticated %}
+ · <a href="{% url 'notes:note-create' %}">Dodaj</a> · <a href="{% url 'notes:contact' %}">Kontakt</a>
+ · {{ user.username }}
+<form class="inline" method="post" action="{% url 'logout' %}">{% csrf_token %}<button>Wyloguj</button></form>
+{% else %} · <a href="{% url 'login' %}">Zaloguj</a>{% endif %}
+</nav>
+<main>{% block content %}{% endblock %}</main>
+</body></html>

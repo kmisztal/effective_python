@@ -1,0 +1,18 @@
+{% extends "notes/base.html" %}
+{% block content %}
+<h1>Notatki</h1>
+<ul>
+{% for note in notes %}
+  <li><a href="{% url 'notes:note-detail' note.pk %}">{{ note.title }}</a></li>
+{% empty %}
+  <li>Nie ma jeszcze notatek.</li>
+{% endfor %}
+</ul>
+{% if is_paginated %}
+<p class="pagination">
+  {% if page_obj.has_previous %}<a href="?page={{ page_obj.previous_page_number }}">Poprzednia</a>{% endif %}
+  Strona {{ page_obj.number }} z {{ paginator.num_pages }}
+  {% if page_obj.has_next %}<a href="?page={{ page_obj.next_page_number }}">Następna</a>{% endif %}
+</p>
+{% endif %}
+{% endblock %}

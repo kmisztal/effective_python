@@ -1,0 +1,8 @@
+{% extends "notes/base.html" %}
+{% block content %}
+<h1>Zaloguj się</h1>
+<form method="post">{% csrf_token %}
+{{ form.as_p }}
+<input type="hidden" name="next" value="{{ next }}">
+<button type="submit">Zaloguj</button></form>
+{% endblock %}

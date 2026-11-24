@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Notatki{% endblock %}</title>
+  <style>
+    body {font: 18px/1.6 system-ui, sans-serif; max-width: 800px; margin: 3rem auto; padding: 0 1rem; color: #18372e; background: #f7faf8;}
+    a {color: #08664b;} nav {border-bottom: 1px solid #becfc5; padding-bottom: 1rem;}
+    main {padding-top: 1rem;} li {margin-bottom: .6rem;} article {white-space: pre-wrap;}
+    time, .pagination {color: #51665c;} h1 {line-height: 1.2;}
+  </style>
+</head>
+<body>
+<nav><a href="{% url 'notes:note-list' %}">Notatki</a> · <a href="{% url 'admin:index' %}">Administracja</a></nav>
+<main>{% block content %}{% endblock %}</main>
+</body>
+</html>
