@@ -1,0 +1,23 @@
+/* Shared RISE typography for lecture notebooks in this directory.
+   System fonts cover Polish letters without a separate web-font fallback. */
+.reveal .jp-RenderedHTMLCommon {
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-family: "Segoe UI", Arial, sans-serif !important;
+  letter-spacing: normal;
+  font-kerning: normal;
+}
+
+/* Keep lecture illustrations within a slide, preserving their aspect ratio. */
+.reveal .jp-RenderedHTMLCommon img {
+  max-height: min(420px, 58vh);
+  max-width: 100%;
+  object-fit: contain;
+}
